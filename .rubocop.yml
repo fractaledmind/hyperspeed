@@ -1,0 +1,22 @@
+AllCops:
+  TargetRubyVersion: 2.6
+  Exclude:
+    - 'hyperspeed.gemspec'
+Metrics/LineLength:
+  Max: 120
+  # To make it possible to copy or click on URIs in the code, we allow lines
+  # contaning a URI to be longer than Max.
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+Style/Documentation:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Style/SignalException:
+  EnforcedStyle: semantic
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+Style/DateTime:
+  AllowCoercion: true
