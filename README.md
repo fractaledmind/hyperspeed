@@ -12,6 +12,8 @@ Add this line to your application's Gemfile:
 gem 'hyperspeed'
 ```
 
+
+
 And then execute:
 
     $ bundle
