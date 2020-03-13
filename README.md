@@ -4,6 +4,7 @@
 
 Unlike other Ruby interfaces for generating HTML, `hyperspeed` works with a simple Hash abstract syntax tree until the very last moment, allowing you to write helpers and objects that transform and compose your HTML partials. `hyperspeed` also provides a terse and lightweight Ruby DSL for writing your HTML (whether partials, components, or fragments).
 
+
 ## Installation
 
 Add this line to your application's Gemfile:
