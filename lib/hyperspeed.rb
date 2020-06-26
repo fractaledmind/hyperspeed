@@ -22,7 +22,7 @@ module Hyperspeed
 
       if ast[:properties]
         properties = dasherize_nested_hash_keys(ast[:properties])
-                     .map { |k, v| %(#{k}="#{Array[v].join(' ')}") }
+                     .map { |k, v| %(#{k}="#{meld(v)}") }
                      .join(' ')
         %(<#{tag_name} #{properties}>#{content}</#{tag_name}>)
       else
@@ -119,5 +119,14 @@ def dasherize_nested_hash_keys(hash)
       output[key] = value
     end
   end
+end
+
+def meld(*args)
+  args.flatten
+      .compact
+      .map(&:to_s)
+      .map(&:strip)
+      .uniq
+      .join(' ')
 end
 # rubocop:enable Style/CommentedKeyword
