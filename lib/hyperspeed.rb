@@ -42,6 +42,10 @@ module Hyperspeed
       instance_eval(&block)
     end
 
+    def p(*args)
+      build_ast(:p, *args)
+    end
+
     # rubocop:disable Style/MethodMissingSuper
     def method_missing(tag_or_method, *args)
       if @self_before_instance_eval.respond_to?(tag_or_method, _include_private_methods = true)
